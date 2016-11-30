@@ -20,6 +20,7 @@ Form::Form()
 
 	isGoal = false;
 	timer.Reset();
+	//利用したい探索方法のみコメントアウトを外す。
 	auto route = BreadthFirstSearch();
 	//auto r = DepthFirstSearch(); auto route = StackToVector<std::pair<int, int>>(r);
 	//auto route = AStar();
@@ -49,7 +50,7 @@ void Form::Update()
 	}
 
 	//ここからプログラムを書く
-	DrawFormatString(100, 4, 0xffffff, "所要時間 : %d\t探索量 : %d", time, trouble);
+	DrawFormatString(100, 4, 0xffffff, "所要時間 : %d  探索量 : %d", time, trouble);
 	DrawMap();
 }
 
